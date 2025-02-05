@@ -1,13 +1,17 @@
 "use client";
 
-import { HeroSection } from "./components/ui/hero-section";
+import { FooterSection } from "./components/footer-section";
+import { HeroSection } from "./components/hero-section";
 
 
 
 export default function Home() {
   return (
     <div>
-      <HeroSection />
+      <main>
+        <HeroSection />
+      </main>
+      <FooterSection />
     </div>
   );
 }
