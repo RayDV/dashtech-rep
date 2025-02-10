@@ -9,9 +9,6 @@ function FooterSection() {
   return (
     <footer>
       <div>
-        <Switch />
-        <Label>TESTING</Label>
-        <Button className="bg-slate-700"/>
       </div>
     </footer>
   )
