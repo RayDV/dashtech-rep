@@ -40,7 +40,7 @@ export default function Home() {
             title="Dash Technologies"
             subtitle={{
               regular: "Streamlining student sign-ins",
-              gradient: "with powerful simplicity",
+              gradient: " with powerful simplicity",
             }} 
             description="Out with the old, in with the new. Our software modernizes student attendance tracking with automated reporting, real-time analytics, and a centralized dashboard for your department's needs."
             ctaText="Get Started"
@@ -65,7 +65,61 @@ export default function Home() {
             <ClientsSection />
         </motion.div>
 
-        
+        <div className="bg-background">
+          <motion.section
+            className="container mx-auto px-4 py-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerChildren}
+          >
+            <motion.div
+              className="space-y-5 max-w-3xl mx-auto text-center mb-16"
+              variants={fadeInUp}
+            >
+              <h3 className="text-sm text-gray-600 dark:text-gray-400 group font-geist mx-auto px-5 py-2 bg-gradient-to-tr from-zinc-300/20 via-gray-400/20 to-transparent dark:from-zinc-300/5 dark:via-gray-400/5 border-[2px] border-black/5 dark:border-white/5 rounded-3xl w-fit">
+                  Features
+              </h3> 
+              <h2 className="text-3xl tracking-tighter font-geist bg-clip-text text-transparent mx-auto md:text-4xl bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
+                Everything you need to
+                <span className="text-transaparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-300 dark:to-orange-200">
+                  {" "}
+                  manage your department
+                </span>
+              </h2>
+              <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+                                Powerful tools to streamline attendance
+                                tracking, analyze patterns, and make data-driven
+                                decisions.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={staggerChildren}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <BentoGrid>
+                <BentoCard
+                  name="Analytics Dashboard"
+                  className="md:col-span-2"
+                  background={
+                    <motion.div
+                      variants={fadeInUp}
+                      className="absolute inset-0 bg-gradient-to-tr from-zinc-300/20 via-purple-400/30 to-transparent dark:from-zinc-300/5 dark:via-purple-400/20"
+                    />
+                  }
+                  Icon={BarChart3}
+                  description="Get real-time insights into attendance patterns and student engagement."
+                  href="/dashboard"
+                  cta="View Analytics"
+                />
+              </BentoGrid>
+            </motion.div>
+
+          </motion.section>
+        </div>
       </main>
     </div>
   );
