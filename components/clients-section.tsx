@@ -44,7 +44,7 @@ export function ClientsSection() {
                 {clients.map((client, i) => (
                     <div
                         key={i}
-                        className="aspect-[3/2] relative bg-white dark:bg-white/5 rounded-lg overflow-hidden flex items-center justify-center p-6"
+                        className="aspect-[3/2] relative bg-white dark:bg-white/5 rounded-xl overflow-hidden flex items-center justify-center p-6"
                     >
                         <div className="absolute inset-0 bg-gradient-to-tr from-zinc-300/20 via-purple-400/30 to-transparent dark:from-zinc-300/5 dark:via-purple-400/20" />
                         <Image
