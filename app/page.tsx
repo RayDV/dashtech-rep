@@ -192,7 +192,44 @@ export default function Home() {
             <Developers />
           </motion.div>
         </motion.section>
+
+        <motion.section
+          className="container mx-auto px-4 pb-24"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px " }}
+          variants={staggerChildren}
+        >
+          <motion.div
+            className="space-y-5 max-w-3xl mx-auto text-center mb-16"
+            variants={fadeInUp}
+          >
+            <h3 className="text-sm text-gray-600 dark:text-gray-400 group font-geist mx-auto px-5 py-2 bg-gradient-to-tr from-zinc-300/20 via-gray-400/20 to-transparent dark:from-zinc-300/5 dark:via-gray-400/5 border-[2px] border-black/5 dark:border-white/5 rounded-3xl w-fit">
+              Pricing
+            </h3>
+            <h2 className="text-3xl tracking-tighter font-geist bg-clip-text text-transparent mx-auto md:text-4xl bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
+              Simple pricing for
+              <span className="text-transparent bg-clip-text">
+                {" "}
+                every department
+              </span>
+            </h2>
+            <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+              Choose the perfect plan for your needs. All plans include core
+              features to get you started.
+            </p>
+          </motion.div>
+
+          <motion.div variants={fadeInUp}>
+            <PricingCards 
+                tiers={pricingTiers}
+                className="max-w-5xl mx-auto"
+                sectionClassName="!py-0"
+            />
+          </motion.div>
+        </motion.section>
       </main>
+      <FooterSection />
     </div>
   );
 }
